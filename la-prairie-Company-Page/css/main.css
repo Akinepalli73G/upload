@@ -1,0 +1,559 @@
+* {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  margin: 0;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 20px 10px;
+  transition: top 0.2s ease-in-out;
+}
+
+.navigation .logo {
+  fill: #fff;
+}
+
+.nav-up {
+  top: -74px;
+}
+
+.hamburger {
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 1px;
+  width: 15px;
+  background: #fff;
+}
+
+.hamburger span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.eyeIcon {
+  stroke: #fff;
+}
+
+.text h1 {
+  font-size: 250%;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.text h1+p {
+  text-transform: none;
+}
+
+.text.with-content {
+  visibility: visible !important;
+  transition: opacity 0.1s ease, filter 0.1s ease;
+}
+
+.text:not(.with-content) {
+  height: auto;
+  transition: 0.3s opacity ease;
+}
+
+.text .content {
+  transition: 0.2s opacity ease;
+  /* height: 50vh; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.texts {
+  color: #fff;
+  z-index: 1;
+}
+
+.text:not(.with-content) p {
+  opacity: 0;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+.text p {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 113%;
+  line-height: 1.8;
+}
+
+.topTexts .text p {
+  font-size: 150%;
+}
+
+.text {
+  min-height: 35vh;
+  /* padding: 20vh 0; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.last {
+  width: 100vw;
+  height: 50vh;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.texts .video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.uppercase,
+.uppercase * {
+  text-transform: uppercase;
+}
+
+.texts~* {
+  position: relative;
+  z-index: 2;
+}
+
+.full {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/*2nd section*/
+
+.orangeWrapper {
+  color: #000;
+  padding: 0;
+}
+
+.zoom {
+  padding-top: 25vh;
+  height: 80vh;
+  background-color: #fff;
+}
+
+/*2nd section ends*/
+/* Most of these styles could be removed but are for the demo to look better */
+
+.zoom .heading {
+  margin-top: 0;
+  font-size: 200%;
+}
+
+.zoom .heading+p {
+  width: 768px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#masthead {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 9999;
+  bottom: 60px;
+  left: 50px;
+  width: calc(100vw - 100px);
+}
+
+#masthead nav {
+  width: 100%;
+  display: flex;
+}
+
+#masthead .anchor-nav .anchor.active {
+  font-weight: 400;
+}
+
+#masthead a {
+  flex: 1 1 0px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  font-weight: 400;
+  margin-right: 10px;
+  padding: 1rem 2rem 1rem 0;
+  font-size: 115%;
+  transition: 0.3s all ease-in;
+  position: relative;
+  display: inline-block;
+}
+
+#masthead a:not(.active),
+#masthead a.active:before {
+  opacity: 0.3;
+}
+
+#masthead a:hover:before,
+#masthead a:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+  left: 0;
+}
+
+span.line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  background: #fff;
+  width: 0;
+  transition: 0.3s all ease-in;
+  z-index: -1;
+  bottom: -1.5px;
+}
+
+div#tabs-container {
+  display: flex;
+  flex: 0 0 100%;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+video.tab-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+section.scale {
+  overflow: hidden;
+}
+
+.bg-white {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/**/
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#panels #panels-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+#panels #panels-container .panel {
+  position: relative;
+  width: max-content;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+  text-align: left;
+}
+
+#panels #panels-container .panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+
+#panels #panels-container .panels-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+
+#panels {
+  /* width: 40%; */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.position-relative {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.site.active .overlay {
+  z-index: -1;
+}
+
+.overlay .s-img {
+  transform-origin: center;
+  width: 100%;
+}
+
+.active #masthead {
+  opacity: 1;
+  z-index: 2;
+}
+
+.max-tablet {
+  transition: 0.5s filter ease-in;
+}
+
+.max-tablet.filter {
+  filter: blur(12px);
+}
+
+#panels #panels-container .panel .container>p {
+  position: absolute;
+  bottom: 60px;
+  transform: translateY(-100%);
+  color: #fff;
+  left: 52px;
+  font-size: 120%;
+  width: 800px;
+  max-width: 100%;
+}
+
+/*History*/
+.full-height-parent {
+  height: 100%;
+}
+
+.parallax-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-wrap {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  max-width: 90%;
+}
+
+
+.history-texts .text p.heading {
+  font-size: 215%;
+  font-weight: 500;
+}
+
+.history-texts .pinit {
+  position: sticky;
+  top: 0;
+  transition: filter 0.2s ease-in, opacity 0.4s ease-in;
+}
+
+.history-texts .text:not(.with-content) p {
+  opacity: 1;
+}
+
+.parallax-content .text:first-child {
+  height: 100vh;
+}
+
+.last.transparent {
+  background: transparent;
+  width: 100%;
+}
+
+.timeline-active {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background: #fff;
+  width: 2px;
+  height: 100px;
+  z-index: 2;
+  transition: opacity 0.6s ease-in, margin 0.2s ease-in;
+  opacity: 1 !important;
+}
+
+.timeline-active.makeithide {
+  visibility: hidden;
+}
+
+.has-timeline .texts {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.timeline-ahead~.text {
+  height: 45vh;
+  display: block;
+  text-align: left;
+  max-width: 100% !important;
+  margin: 0 0 0 0;
+  position: relative;
+  margin-left: 10%;
+}
+
+.timeline-ahead~.text:before,
+.timeline-ahead~.text:after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  opacity: 0.3;
+}
+
+.timeline-ahead~.text .timeline-legend {
+  width: auto;
+}
+
+.timeline-ahead~.text p {
+  padding: 0 !important;
+}
+
+.timeline-item>* {
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in;
+}
+
+.timeline-ahead~.text .heading {
+  font-size: 200%;
+}
+
+.has-timeline .last-item {
+  min-height: auto;
+  height: auto;
+  padding-bottom: 2rem
+}
+
+.has-timeline .parallax-image.full-height-parent {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.noblur .parallax-image {
+  filter: blur(0) !important;
+}
+
+@media only screen and (min-width: 900px) {
+  .timeline-wrap .timeline-active {
+    left: 129px;
+    top: 51vh;
+  }
+
+  .timeline-wrap {
+    padding-left: 120px;
+  }
+
+  .timeline-item .timeline-legend {
+    margin-left: calc(-10% - 120px);
+  }
+
+  .timeline-wrap .timeline-ahead {
+    margin-left: -120px;
+  }
+}
+
+/*****************************/
+.video{
+	transition: all 2s ease 0s;
+}
+.content{
+	transition: all 2s ease 0s;
+}
+.content h1{
+	transition: all 2s ease 0s;
+}
+.fexed-text{
+	top:50% !important;
+	transform:translateY(-50%) !important;
+}

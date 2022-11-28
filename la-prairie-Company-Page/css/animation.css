@@ -1,0 +1,23 @@
+.home[data-animation],
+.company[data-animation] {
+  transition: transform 2s ease, 2.2s filter ease-in-out, opacity 3s ease-in-out;
+}
+
+[data-animation="fadeIn"] {
+  opacity: 0;
+}
+
+[data-animation="fadeIn"].loaded {
+  opacity: 1;
+}
+
+[data-animation="fadeInFromBottom"] {
+  transform: translateY(15px);
+  filter: blur(3px);
+}
+
+[data-animation="fadeInFromBottom"].loaded,
+[data-animation="fadeInFromUp"].loaded {
+  transform: translateY(0);
+  filter: blur(0);
+}
